@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>getting started Socket.io in NodeJS</title>
+    </head>
+    <body>
+        <p>hello world</p>
+        <div id="content"></div>
+        <script src="/assets/lib/socket.io/socket.io.js"></script>
+        <script>
+            const socket = io('http://localhost:5678')
+            socket.on('news', (data) => {
+                console.log(data)
+                socket.emit('my other event', {my: 'data'})
+            })
+        </script>
+    </body>
+</html>
