@@ -10,8 +10,17 @@
             const socket = io('http://localhost:5678')
             socket.on('news', (data) => {
                 console.log(data)
+                appendContent(data)
                 socket.emit('my other event', {my: 'data'})
             })
+
+            function appendContent(txt)
+            {
+                var childnode = document.createElement('p')
+                var txtnode = document.createTextNode(txt)
+                childnode.appendChild(txtnode)
+                document.getElementById('content').appendChild(childnode)
+            }
         </script>
     </body>
 </html>
