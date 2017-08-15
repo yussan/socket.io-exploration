@@ -1,0 +1,17 @@
+{
+  "name": "2.chat_example",
+  "version": "0.0.1",
+  "description": "exploration socker.io - chat example app",
+  "main": "index.js",
+  "author": "yussan",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
