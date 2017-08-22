@@ -1,0 +1,18 @@
+{
+  "name": "2.2.chat_connect_and_disconect_db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "yussan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4",
+    "socket.io": "^2.0.3",
+    "sqlite3": "^3.1.9"
+  },
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
