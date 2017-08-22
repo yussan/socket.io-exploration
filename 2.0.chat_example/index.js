@@ -2,8 +2,8 @@ const express = require('express')
 const app = express()
 const http = require('http').Server(app) 
 
-const server = app.listen(3000, () => {
-  console.log('listenting on port', 3000)
+const server = app.listen(8080, () => {
+  console.log('listeting on port', 8080)
 })
 const io = require('socket.io')(server)
 

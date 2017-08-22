@@ -1,5 +1,8 @@
 # 2.chat_example
 
+## About 
+Anonimous real time chat.
+
 ## Instalation
 ```
 npm install

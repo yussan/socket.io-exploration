@@ -3,7 +3,7 @@ const app = require('http').createServer(handler),
     url = require('url'),
     path = require('path'),
     port = {
-        app: 3000,
+        app: 8080,
         socket: 5678
     }
 

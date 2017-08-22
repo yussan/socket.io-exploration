@@ -1,5 +1,8 @@
 # 2.chat_example
 
+## About
+Sample emit data using socket.io.
+
 ## Instalation
 ```
 npm install
