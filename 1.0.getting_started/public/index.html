@@ -9,8 +9,8 @@
         <script>
             const socket = io('http://localhost:5678')
             socket.on('news', (data) => {
-                console.log(data)
-                appendContent(data)
+                console.log("from socket:", data)
+                appendContent(data.hello)
                 socket.emit('my other event', {my: 'data'})
             })
 
