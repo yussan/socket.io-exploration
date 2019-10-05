@@ -1,4 +1,4 @@
-# 2.1 chat_example_connect_and_disconnect
+# 2.1.chat - connect, writing and disconnect
 
 ![https://res.cloudinary.com/dhjkktmal/image/upload/v1569912555/github/Screen_Shot_2019-10-01_at_13.46.46.jpg](https://res.cloudinary.com/dhjkktmal/image/upload/v1569912555/github/Screen_Shot_2019-10-01_at_13.46.46.jpg)
 
