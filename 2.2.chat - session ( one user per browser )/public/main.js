@@ -18,6 +18,7 @@ $(function() {
 
   // Prompt for setting a username
   var username;
+  var session = Cookies.get('session') ? JSON.parse(Cookies.get('session')) : {};
   var connected = false;
   var typing = false;
   var lastTypingTime;
@@ -37,18 +38,26 @@ $(function() {
 
   // Sets the client's username
   function setUsername () {
-    username = cleanInput($usernameInput.val().trim());
+    // If the session doesn't exist
+    if ($.isEmptyObject(session)) {
+      username = cleanInput($usernameInput.val().trim());
 
-    // If the username is valid
-    if (username) {
-      $loginPage.fadeOut();
-      $chatPage.show();
-      $loginPage.off('click');
-      $currentInput = $inputMessage.focus();
-
-      // Tell the server your username
-      socket.emit('add user', username);
+      // If the username is valid
+      if (username) {
+        session.username = username;
+        Cookies.set('session', JSON.stringify(session));
+      }
+    } else {
+      username = session.username;
     }
+
+    $loginPage.fadeOut();
+    $chatPage.show();
+    $loginPage.off('click');
+    $currentInput = $inputMessage.focus();
+
+    // Tell the server your username
+    socket.emit('add user', username);
   }
 
   // Sends a chat message
@@ -279,4 +288,9 @@ $(function() {
     log('attempt to reconnect has failed');
   });
 
+  // Try to automatically log in
+  if (!$.isEmptyObject(session)) {
+    $usernameInput.val(session.username);
+    setUsername();
+  }
 });
