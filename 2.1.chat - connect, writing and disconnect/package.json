@@ -5,7 +5,7 @@
   "author": "yussan",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.4",
+    "express": "^4.17.3",
     "nodemon": "^1.11.0",
     "socket.io": "^2.0.3"
   },
